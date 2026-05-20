@@ -1395,12 +1395,10 @@
 <body>
 
 <!-- ── CRISIS BANNER (always visible at top of pages) ── -->
-<div style="background: linear-gradient(90deg, var(--teal), var(--purple-mid)); padding: 10px 5%; text-align: center; font-size: 13px; color: white; font-weight: 500; position: fixed; top: 0; left: 0; right: 0; z-index: 2000;">
-  🆘 In a mental health crisis? Call or text <strong>988</strong> (Suicide & Crisis Lifeline) · Available 24/7
-</div>
+
 
 <!-- ── NAV ── -->
-<nav id="navbar" style="top: 40px;">
+<nav id="navbar" style="top: 0;">
   <a class="nav-logo" href="#" onclick="showMain()">
     <div class="nav-logo-circle">S</div>
     <div class="nav-logo-text">
@@ -1766,50 +1764,18 @@
     <div style="background: var(--purple-mist); border-radius: 32px; padding: 48px; border: 1px solid rgba(201,168,232,0.3);">
       <h3 style="font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; color: var(--text-dark); margin-bottom: 8px;">Send Us a Message</h3>
       <p style="font-size: 14px; color: var(--text-light); margin-bottom: 32px;">Fill out the form and we'll get back to you as soon as possible.</p>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px;">
-        <div><label style="display:block;font-size:13px;font-weight:600;color:var(--text-mid);margin-bottom:8px;">First Name</label><input type="text" placeholder="Your first name" style="width:100%;padding:14px 18px;background:white;border:1.5px solid rgba(201,168,232,0.4);border-radius:14px;font-size:15px;font-family:'DM Sans',sans-serif;color:var(--text-dark);outline:none;transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--purple-mid)'" onblur="this.style.borderColor='rgba(201,168,232,0.4)'"></div>
-        <div><label style="display:block;font-size:13px;font-weight:600;color:var(--text-mid);margin-bottom:8px;">Last Name</label><input type="text" placeholder="Your last name" style="width:100%;padding:14px 18px;background:white;border:1.5px solid rgba(201,168,232,0.4);border-radius:14px;font-size:15px;font-family:'DM Sans',sans-serif;color:var(--text-dark);outline:none;transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--purple-mid)'" onblur="this.style.borderColor='rgba(201,168,232,0.4)'"></div>
-      </div>
-      <div style="margin-bottom:20px;"><label style="display:block;font-size:13px;font-weight:600;color:var(--text-mid);margin-bottom:8px;">Email Address</label><input type="email" placeholder="your@email.com" style="width:100%;padding:14px 18px;background:white;border:1.5px solid rgba(201,168,232,0.4);border-radius:14px;font-size:15px;font-family:'DM Sans',sans-serif;color:var(--text-dark);outline:none;transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--purple-mid)'" onblur="this.style.borderColor='rgba(201,168,232,0.4)'"></div>
-      <div style="margin-bottom:20px;"><label style="display:block;font-size:13px;font-weight:600;color:var(--text-mid);margin-bottom:8px;">Subject</label><select style="width:100%;padding:14px 18px;background:white;border:1.5px solid rgba(201,168,232,0.4);border-radius:14px;font-size:15px;font-family:'DM Sans',sans-serif;color:var(--text-dark);outline:none;"><option>General Inquiry</option><option>Collaboration / Partnership</option><option>Volunteer Interest</option><option>Research Submission</option><option>Media / Press</option><option>Other</option></select></div>
-      <div style="margin-bottom:28px;"><label style="display:block;font-size:13px;font-weight:600;color:var(--text-mid);margin-bottom:8px;">Message</label><textarea placeholder="Tell us what's on your mind..." rows="5" style="width:100%;padding:14px 18px;background:white;border:1.5px solid rgba(201,168,232,0.4);border-radius:14px;font-size:15px;font-family:'DM Sans',sans-serif;color:var(--text-dark);outline:none;resize:vertical;" onfocus="this.style.borderColor='var(--purple-mid)'" onblur="this.style.borderColor='rgba(201,168,232,0.4)'"></textarea></div>
-      <button style="width:100%;padding:16px;background:linear-gradient(135deg,var(--purple-deep),var(--purple-mid));color:white;border:none;border-radius:50px;font-size:16px;font-weight:600;font-family:'DM Sans',sans-serif;cursor:pointer;box-shadow:0 8px 24px rgba(123,79,166,0.3);letter-spacing:0.02em;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Send Message →</button>
-    </div>
-  </div>
-</div>
-
-
-          <input type="text" placeholder="Your first name">
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you">
+        <input type="hidden" name="form-name" value="contact">
+        <p style="display:none;"><input name="bot-field"></p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px;">
+          <div><label style="display:block;font-size:13px;font-weight:600;color:var(--text-mid);margin-bottom:8px;">First Name</label><input type="text" name="first-name" placeholder="Your first name" required style="width:100%;padding:14px 18px;background:white;border:1.5px solid rgba(201,168,232,0.4);border-radius:14px;font-size:15px;font-family:'DM Sans',sans-serif;color:var(--text-dark);outline:none;transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--purple-mid)'" onblur="this.style.borderColor='rgba(201,168,232,0.4)'"></div>
+          <div><label style="display:block;font-size:13px;font-weight:600;color:var(--text-mid);margin-bottom:8px;">Last Name</label><input type="text" name="last-name" placeholder="Your last name" style="width:100%;padding:14px 18px;background:white;border:1.5px solid rgba(201,168,232,0.4);border-radius:14px;font-size:15px;font-family:'DM Sans',sans-serif;color:var(--text-dark);outline:none;transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--purple-mid)'" onblur="this.style.borderColor='rgba(201,168,232,0.4)'"></div>
         </div>
-        <div class="form-group">
-          <label>Last Name</label>
-          <input type="text" placeholder="Your last name">
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label>Email Address</label>
-        <input type="email" placeholder="your@email.com">
-      </div>
-
-      <div class="form-group">
-        <label>Subject</label>
-        <select>
-          <option>General Inquiry</option>
-          <option>Collaboration / Partnership</option>
-          <option>Volunteer Interest</option>
-          <option>Research Submission</option>
-          <option>Media / Press</option>
-          <option>Other</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label>Message</label>
-        <textarea placeholder="Tell us what's on your mind..."></textarea>
-      </div>
-
-      <button class="form-submit">Send Message →</button>
+        <div style="margin-bottom:20px;"><label style="display:block;font-size:13px;font-weight:600;color:var(--text-mid);margin-bottom:8px;">Email Address</label><input type="email" name="email" placeholder="your@email.com" required style="width:100%;padding:14px 18px;background:white;border:1.5px solid rgba(201,168,232,0.4);border-radius:14px;font-size:15px;font-family:'DM Sans',sans-serif;color:var(--text-dark);outline:none;transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--purple-mid)'" onblur="this.style.borderColor='rgba(201,168,232,0.4)'"></div>
+        <div style="margin-bottom:20px;"><label style="display:block;font-size:13px;font-weight:600;color:var(--text-mid);margin-bottom:8px;">Subject</label><select name="subject" style="width:100%;padding:14px 18px;background:white;border:1.5px solid rgba(201,168,232,0.4);border-radius:14px;font-size:15px;font-family:'DM Sans',sans-serif;color:var(--text-dark);outline:none;"><option>General Inquiry</option><option>Collaboration / Partnership</option><option>Volunteer Interest</option><option>Research Submission</option><option>Media / Press</option><option>Other</option></select></div>
+        <div style="margin-bottom:28px;"><label style="display:block;font-size:13px;font-weight:600;color:var(--text-mid);margin-bottom:8px;">Message</label><textarea name="message" placeholder="Tell us what's on your mind..." rows="5" required style="width:100%;padding:14px 18px;background:white;border:1.5px solid rgba(201,168,232,0.4);border-radius:14px;font-size:15px;font-family:'DM Sans',sans-serif;color:var(--text-dark);outline:none;resize:vertical;" onfocus="this.style.borderColor='var(--purple-mid)'" onblur="this.style.borderColor='rgba(201,168,232,0.4)'"></textarea></div>
+        <button type="submit" style="width:100%;padding:16px;background:linear-gradient(135deg,var(--purple-deep),var(--purple-mid));color:white;border:none;border-radius:50px;font-size:16px;font-weight:600;font-family:'DM Sans',sans-serif;cursor:pointer;box-shadow:0 8px 24px rgba(123,79,166,0.3);letter-spacing:0.02em;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Send Message →</button>
+      </form>
     </div>
   </div>
 </div>
