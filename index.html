@@ -1761,11 +1761,11 @@
         <span style="display:block;width:24px;height:2px;background:linear-gradient(90deg,#9B6FC4,#3AADA8);border-radius:2px;"></span>Contact & Support
       </div>
       <h1 style="font-family:'Playfair Display',serif;font-size:clamp(30px,4vw,48px);font-weight:900;color:#1E1025;line-height:1.15;margin-bottom:16px;">We Are Here For You</h1>
-      <p style="font-size:16px;line-height:1.75;color:#4A3560;max-width:600px;">Whether you need support, want to collaborate, or just want to say hello — reach out. We read every message.</p>
+      <p style="font-size:16px;line-height:1.75;color:#4A3560;max-width:600px;">Whether you need support, want to collaborate, or just want to say hello — fill out the form below or reach out to us directly.</p>
     </div>
 
-    <!-- TOP ROW: Contact form + Info card -->
-    <div style="display:grid;grid-template-columns:1fr 1.6fr;gap:36px;align-items:start;margin-bottom:36px;">
+    <!-- TOP ROW: Info card -->
+    <div style="display:grid;grid-template-columns:1fr 2fr;gap:36px;align-items:start;margin-bottom:36px;">
 
       <!-- Info card -->
       <div style="background:linear-gradient(135deg,#7B4FA6,#9B6FC4);border-radius:28px;padding:40px;color:white;">
@@ -1789,10 +1789,10 @@
         </div>
 
         <div style="display:flex;align-items:center;gap:12px;margin-bottom:28px;">
-          <div style="width:38px;height:38px;background:rgba(255,255,255,0.18);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;">🏫</div>
+          <div style="width:38px;height:38px;background:rgba(255,255,255,0.18);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;">💼</div>
           <div>
-            <div style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-bottom:2px;">Based At</div>
-            <div style="font-size:13px;color:white;">Add your university here</div>
+            <div style="font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-bottom:2px;">LinkedIn</div>
+            <a href="https://www.linkedin.com/in/student-mind-circle-club-7a82a640b" target="_blank" style="font-size:13px;font-weight:600;color:white;text-decoration:none;">Student Mind Circle</a>
           </div>
         </div>
 
@@ -1806,61 +1806,6 @@
         </a>
       </div>
 
-      <!-- Contact form -->
-      <div style="background:white;border-radius:28px;padding:40px;border:1px solid rgba(201,168,232,0.25);box-shadow:0 8px 32px rgba(123,79,166,0.08);">
-        <h3 style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:#1E1025;margin-bottom:6px;">Send Us a Message</h3>
-        <p style="font-size:13px;color:#8A7A9A;margin-bottom:24px;">Every message goes directly to our team.</p>
-
-        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-          <input type="hidden" name="form-name" value="contact">
-          <p style="display:none;"><input name="bot-field"></p>
-
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px;">
-            <div>
-              <label style="display:block;font-size:11px;font-weight:600;color:#4A3560;margin-bottom:5px;">First Name *</label>
-              <input type="text" name="first-name" placeholder="First name" required style="width:100%;padding:11px 14px;background:#F7F0FF;border:1.5px solid rgba(201,168,232,0.4);border-radius:10px;font-size:13px;font-family:'DM Sans',sans-serif;color:#1E1025;outline:none;box-sizing:border-box;">
-            </div>
-            <div>
-              <label style="display:block;font-size:11px;font-weight:600;color:#4A3560;margin-bottom:5px;">Last Name</label>
-              <input type="text" name="last-name" placeholder="Last name" style="width:100%;padding:11px 14px;background:#F7F0FF;border:1.5px solid rgba(201,168,232,0.4);border-radius:10px;font-size:13px;font-family:'DM Sans',sans-serif;color:#1E1025;outline:none;box-sizing:border-box;">
-            </div>
-          </div>
-
-          <div style="margin-bottom:14px;">
-            <label style="display:block;font-size:11px;font-weight:600;color:#4A3560;margin-bottom:5px;">Your Email *</label>
-            <input type="email" name="email" placeholder="so we can reply to you" required style="width:100%;padding:11px 14px;background:#F7F0FF;border:1.5px solid rgba(201,168,232,0.4);border-radius:10px;font-size:13px;font-family:'DM Sans',sans-serif;color:#1E1025;outline:none;box-sizing:border-box;">
-          </div>
-
-          <div style="margin-bottom:14px;">
-            <label style="display:block;font-size:11px;font-weight:600;color:#4A3560;margin-bottom:5px;">Subject *</label>
-            <select name="subject" required style="width:100%;padding:11px 14px;background:#F7F0FF;border:1.5px solid rgba(201,168,232,0.4);border-radius:10px;font-size:13px;font-family:'DM Sans',sans-serif;color:#1E1025;outline:none;box-sizing:border-box;">
-              <option value="">Select a subject...</option>
-              <option>General Inquiry</option>
-              <option>Collaboration / Partnership</option>
-              <option>Volunteer Interest</option>
-              <option>Research Submission</option>
-              <option>Media / Press</option>
-              <option>Other</option>
-            </select>
-          </div>
-
-          <div style="margin-bottom:14px;">
-            <label style="display:block;font-size:11px;font-weight:600;color:#4A3560;margin-bottom:5px;">Phone <span style="color:#8A7A9A;font-weight:400;">(optional)</span></label>
-            <input type="tel" name="phone" placeholder="Your phone number" style="width:100%;padding:11px 14px;background:#F7F0FF;border:1.5px solid rgba(201,168,232,0.4);border-radius:10px;font-size:13px;font-family:'DM Sans',sans-serif;color:#1E1025;outline:none;box-sizing:border-box;">
-          </div>
-
-          <div style="margin-bottom:20px;">
-            <label style="display:block;font-size:11px;font-weight:600;color:#4A3560;margin-bottom:5px;">Message *</label>
-            <textarea name="message" placeholder="Tell us what is on your mind..." rows="5" required style="width:100%;padding:11px 14px;background:#F7F0FF;border:1.5px solid rgba(201,168,232,0.4);border-radius:10px;font-size:13px;font-family:'DM Sans',sans-serif;color:#1E1025;outline:none;resize:vertical;box-sizing:border-box;"></textarea>
-          </div>
-
-          <button type="submit" style="width:100%;padding:14px;background:linear-gradient(135deg,#7B4FA6,#9B6FC4);color:white;border:none;border-radius:50px;font-size:14px;font-weight:600;font-family:'DM Sans',sans-serif;cursor:pointer;box-shadow:0 6px 20px rgba(123,79,166,0.3);">
-            Send Message →
-          </button>
-          <p style="text-align:center;font-size:11px;color:#8A7A9A;margin-top:12px;">🔒 Your details are kept private and never shared.</p>
-        </form>
-      </div>
-    </div>
 
     <!-- BOTTOM ROW: Google Form support section -->
     <div style="background:white;border-radius:28px;padding:44px;border:1px solid rgba(201,168,232,0.25);box-shadow:0 8px 32px rgba(123,79,166,0.08);">
